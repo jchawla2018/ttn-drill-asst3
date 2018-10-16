@@ -1,0 +1,9 @@
+---
+username: kitchen
+ssh_key: "/data/ttn_assignment/ttn-drill-asst3/webserver/.kitchen/docker_id_rsa"
+image_id: a466c652f03b
+container_id: 7420ebea14a146fe926ebec5cc460aaf800279f2106280a881121197f937074d
+hostname: localhost
+port: 32776
+last_action: create
+last_error: Kitchen::ActionFailed

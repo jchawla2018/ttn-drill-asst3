@@ -1,0 +1,3 @@
+I, [2018-10-16T13:36:47.095914 #26625]  INFO -- default-ubuntu: -----> Destroying <default-ubuntu>...
+I, [2018-10-16T13:36:47.206489 #26625]  INFO -- default-ubuntu: Error response from daemon: Container 669f8189686cff1685f5eeddfd7bc4aac8d80a5941b9a65ca16d577f3a7845e7 is not running
+I, [2018-10-16T13:36:47.220424 #26625]  INFO -- default-ubuntu: Finished destroying <default-ubuntu> (0m0.12s).

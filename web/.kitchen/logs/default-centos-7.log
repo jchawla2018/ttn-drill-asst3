@@ -1,0 +1,226 @@
+I, [2018-10-16T13:45:57.981574 #27756]  INFO -- default-centos-7: -----> Converging <default-centos-7>...
+I, [2018-10-16T13:45:57.982345 #27756]  INFO -- default-centos-7: Preparing files for transfer
+I, [2018-10-16T13:45:57.982563 #27756]  INFO -- default-centos-7: Preparing dna.json
+I, [2018-10-16T13:45:57.982899 #27756]  INFO -- default-centos-7: Resolving cookbook dependencies with Berkshelf 7.0.6...
+I, [2018-10-16T13:46:03.406743 #27756]  INFO -- default-centos-7: Removing non-cookbook files before transfer
+I, [2018-10-16T13:46:03.408028 #27756]  INFO -- default-centos-7: Preparing validation.pem
+I, [2018-10-16T13:46:03.408339 #27756]  INFO -- default-centos-7: Preparing client.rb
+I, [2018-10-16T13:46:03.585270 #27756]  INFO -- default-centos-7: -----> Chef Omnibus installation detected (install only if missing)
+I, [2018-10-16T13:46:03.689946 #27756]  INFO -- default-centos-7: Transferring files to <default-centos-7>
+I, [2018-10-16T13:46:06.046607 #27756]  INFO -- default-centos-7: Starting Chef Client, version 14.5.33
+I, [2018-10-16T13:46:06.336525 #27756]  INFO -- default-centos-7: [2018-10-16T08:16:06+00:00] WARN: Plugin Network: unable to detect ipaddress
+I, [2018-10-16T13:46:06.337018 #27756]  INFO -- default-centos-7: [2018-10-16T08:16:06+00:00] WARN: Plugin Network: unable to detect ipaddress
+I, [2018-10-16T13:46:07.202709 #27756]  INFO -- default-centos-7: resolving cookbooks for run list: ["webserver::default"]
+I, [2018-10-16T13:46:07.237672 #27756]  INFO -- default-centos-7: Synchronizing Cookbooks:
+I, [2018-10-16T13:46:07.264084 #27756]  INFO -- default-centos-7:   - webserver (0.1.0)
+I, [2018-10-16T13:46:07.264707 #27756]  INFO -- default-centos-7: Installing Cookbook Gems:
+I, [2018-10-16T13:46:07.268763 #27756]  INFO -- default-centos-7: Compiling Cookbooks...
+I, [2018-10-16T13:46:07.276884 #27756]  INFO -- default-centos-7: Converging 9 resources
+I, [2018-10-16T13:46:07.277655 #27756]  INFO -- default-centos-7: Recipe: webserver::default
+I, [2018-10-16T13:46:09.568047 #27756]  INFO -- default-centos-7:   * yum_package[httpd] action install (up to date)
+I, [2018-10-16T13:46:09.601110 #27756]  INFO -- default-centos-7:   * execute[mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.disabled] action run
+I, [2018-10-16T13:46:09.601885 #27756]  INFO -- default-centos-7:     - execute mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.disabled
+I, [2018-10-16T13:46:09.608549 #27756]  INFO -- default-centos-7:   * template[/etc/httpd/conf.d/ttnA.conf] action create
+I, [2018-10-16T13:46:09.611398 #27756]  INFO -- default-centos-7:     - create new file /etc/httpd/conf.d/ttnA.conf
+I, [2018-10-16T13:46:09.612249 #27756]  INFO -- default-centos-7:     - update content in file /etc/httpd/conf.d/ttnA.conf from none to a0a211
+I, [2018-10-16T13:46:09.612408 #27756]  INFO -- default-centos-7:     --- /etc/httpd/conf.d/ttnA.conf	2018-10-16 08:16:09.602735876 +0000
+I, [2018-10-16T13:46:09.612705 #27756]  INFO -- default-centos-7:     +++ /etc/httpd/conf.d/.chef-ttnA20181016-533-fsa0j7.conf	2018-10-16 08:16:09.602735876 +0000
+I, [2018-10-16T13:46:09.612893 #27756]  INFO -- default-centos-7:     @@ -1 +1,17 @@
+I, [2018-10-16T13:46:09.613069 #27756]  INFO -- default-centos-7:     +
+I, [2018-10-16T13:46:09.613119 #27756]  INFO -- default-centos-7:     +<VirtualHost *:80>
+I, [2018-10-16T13:46:09.613173 #27756]  INFO -- default-centos-7:     +  ServerAdmin webmaster@localhost
+I, [2018-10-16T13:46:09.613443 #27756]  INFO -- default-centos-7:     +
+I, [2018-10-16T13:46:09.613510 #27756]  INFO -- default-centos-7:     +  DocumentRoot /srv/apache/ttnA
+I, [2018-10-16T13:46:09.613732 #27756]  INFO -- default-centos-7:     +  <Directory />
+I, [2018-10-16T13:46:09.613782 #27756]  INFO -- default-centos-7:     +    Options FollowSymLinks
+I, [2018-10-16T13:46:09.613835 #27756]  INFO -- default-centos-7:     +    AllowOverride None
+I, [2018-10-16T13:46:09.613883 #27756]  INFO -- default-centos-7:     +  </Directory>
+I, [2018-10-16T13:46:09.613931 #27756]  INFO -- default-centos-7:     +  <Directory /srv/apache/ttnA>
+I, [2018-10-16T13:46:09.613994 #27756]  INFO -- default-centos-7:     +    Options Indexes FollowSymLinks MultiViews
+I, [2018-10-16T13:46:09.614381 #27756]  INFO -- default-centos-7:     +    AllowOverride None
+I, [2018-10-16T13:46:09.614442 #27756]  INFO -- default-centos-7:     +    Order allow,deny
+I, [2018-10-16T13:46:09.614694 #27756]  INFO -- default-centos-7:     +    allow from all
+I, [2018-10-16T13:46:09.614746 #27756]  INFO -- default-centos-7:     +  </Directory>
+I, [2018-10-16T13:46:09.614995 #27756]  INFO -- default-centos-7:     +</VirtualHost>
+I, [2018-10-16T13:46:09.615229 #27756]  INFO -- default-centos-7:     - change mode from '' to '0644'
+I, [2018-10-16T13:46:09.616125 #27756]  INFO -- default-centos-7:   * directory[/srv/apache/ttnA] action create
+I, [2018-10-16T13:46:09.617057 #27756]  INFO -- default-centos-7:     - create new directory /srv/apache/ttnA
+I, [2018-10-16T13:46:09.617587 #27756]  INFO -- default-centos-7:     - change mode from '' to '0755'
+I, [2018-10-16T13:46:09.620829 #27756]  INFO -- default-centos-7:   * template[/srv/apache/ttnA/index.html] action create
+I, [2018-10-16T13:46:09.621313 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.621398 #27756]  INFO -- default-centos-7:     ================================================================================
+I, [2018-10-16T13:46:09.621676 #27756]  INFO -- default-centos-7:     Error executing action `create` on resource 'template[/srv/apache/ttnA/index.html]'
+I, [2018-10-16T13:46:09.621778 #27756]  INFO -- default-centos-7:     ================================================================================
+I, [2018-10-16T13:46:09.621848 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.622154 #27756]  INFO -- default-centos-7:     Chef::Mixin::Template::TemplateError
+I, [2018-10-16T13:46:09.622226 #27756]  INFO -- default-centos-7:     ------------------------------------
+I, [2018-10-16T13:46:09.622287 #27756]  INFO -- default-centos-7:     undefined method `[]' for nil:NilClass
+I, [2018-10-16T13:46:09.622352 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.622601 #27756]  INFO -- default-centos-7:     Resource Declaration:
+I, [2018-10-16T13:46:09.622645 #27756]  INFO -- default-centos-7:     ---------------------
+I, [2018-10-16T13:46:09.622679 #27756]  INFO -- default-centos-7:     # In /tmp/kitchen/cache/cookbooks/webserver/recipes/default.rb
+I, [2018-10-16T13:46:09.622712 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.622925 #27756]  INFO -- default-centos-7:      45:   template "#{document_root}/index.html" do
+I, [2018-10-16T13:46:09.622966 #27756]  INFO -- default-centos-7:      46:     source "index.html.erb"
+I, [2018-10-16T13:46:09.623000 #27756]  INFO -- default-centos-7:      47:     mode "0644"
+I, [2018-10-16T13:46:09.623032 #27756]  INFO -- default-centos-7:      48:     variables(
+I, [2018-10-16T13:46:09.623066 #27756]  INFO -- default-centos-7:      49:       :site_name => site_name,
+I, [2018-10-16T13:46:09.623098 #27756]  INFO -- default-centos-7:      50:       :port => site_data["port"]
+I, [2018-10-16T13:46:09.623130 #27756]  INFO -- default-centos-7:      51:     )
+I, [2018-10-16T13:46:09.623523 #27756]  INFO -- default-centos-7:      52:   end
+I, [2018-10-16T13:46:09.623569 #27756]  INFO -- default-centos-7:      53: end
+I, [2018-10-16T13:46:09.623600 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.623631 #27756]  INFO -- default-centos-7:     Compiled Resource:
+I, [2018-10-16T13:46:09.623662 #27756]  INFO -- default-centos-7:     ------------------
+I, [2018-10-16T13:46:09.623693 #27756]  INFO -- default-centos-7:     # Declared in /tmp/kitchen/cache/cookbooks/webserver/recipes/default.rb:45:in `block in from_file'
+I, [2018-10-16T13:46:09.623725 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.623975 #27756]  INFO -- default-centos-7:     template("/srv/apache/ttnA/index.html") do
+I, [2018-10-16T13:46:09.624014 #27756]  INFO -- default-centos-7:       action [:create]
+I, [2018-10-16T13:46:09.624048 #27756]  INFO -- default-centos-7:       default_guard_interpreter :default
+I, [2018-10-16T13:46:09.624110 #27756]  INFO -- default-centos-7:       source "index.html.erb"
+I, [2018-10-16T13:46:09.624144 #27756]  INFO -- default-centos-7:       declared_type :template
+I, [2018-10-16T13:46:09.624175 #27756]  INFO -- default-centos-7:       cookbook_name "webserver"
+I, [2018-10-16T13:46:09.624206 #27756]  INFO -- default-centos-7:       recipe_name "default"
+I, [2018-10-16T13:46:09.624236 #27756]  INFO -- default-centos-7:       mode "0644"
+I, [2018-10-16T13:46:09.624267 #27756]  INFO -- default-centos-7:       variables {:site_name=>"ttnA", :port=>80}
+I, [2018-10-16T13:46:09.624581 #27756]  INFO -- default-centos-7:       path "/srv/apache/ttnA/index.html"
+I, [2018-10-16T13:46:09.624622 #27756]  INFO -- default-centos-7:       owner nil
+I, [2018-10-16T13:46:09.624656 #27756]  INFO -- default-centos-7:       group nil
+I, [2018-10-16T13:46:09.624688 #27756]  INFO -- default-centos-7:       verifications []
+I, [2018-10-16T13:46:09.624719 #27756]  INFO -- default-centos-7:     end
+I, [2018-10-16T13:46:09.624750 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.624988 #27756]  INFO -- default-centos-7:     Template Context:
+I, [2018-10-16T13:46:09.625033 #27756]  INFO -- default-centos-7:     -----------------
+I, [2018-10-16T13:46:09.625083 #27756]  INFO -- default-centos-7:     on line #3
+I, [2018-10-16T13:46:09.625130 #27756]  INFO -- default-centos-7:       1: <html>
+I, [2018-10-16T13:46:09.625351 #27756]  INFO -- default-centos-7:       2:   <body>
+I, [2018-10-16T13:46:09.625398 #27756]  INFO -- default-centos-7:       3:     <h1>Welcome to <%= node["motd"]["company"] %></h1>
+I, [2018-10-16T13:46:09.625464 #27756]  INFO -- default-centos-7:       4:     <h2>We love <%= @site_name %></h2>
+I, [2018-10-16T13:46:09.625511 #27756]  INFO -- default-centos-7:       5:     <%= node["ipaddress"] %>:<%= @port %>
+I, [2018-10-16T13:46:09.625556 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.625785 #27756]  INFO -- default-centos-7:     System Info:
+I, [2018-10-16T13:46:09.625981 #27756]  INFO -- default-centos-7:     ------------
+I, [2018-10-16T13:46:09.626041 #27756]  INFO -- default-centos-7:     chef_version=14.5.33
+I, [2018-10-16T13:46:09.626095 #27756]  INFO -- default-centos-7:     platform=centos
+I, [2018-10-16T13:46:09.626156 #27756]  INFO -- default-centos-7:     platform_version=7.5.1804
+I, [2018-10-16T13:46:09.626206 #27756]  INFO -- default-centos-7:     ruby=ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+I, [2018-10-16T13:46:09.626255 #27756]  INFO -- default-centos-7:     program_name=/opt/chef/bin/chef-client
+I, [2018-10-16T13:46:09.626590 #27756]  INFO -- default-centos-7:     executable=/opt/chef/bin/chef-client
+I, [2018-10-16T13:46:09.626646 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.702580 #27756]  INFO -- default-centos-7:   * service[httpd] action restart
+I, [2018-10-16T13:46:09.704364 #27756]  INFO -- default-centos-7:     * service[httpd]: No custom command for restart specified and unable to locate the init.d script!
+I, [2018-10-16T13:46:09.705018 #27756]  INFO -- default-centos-7:     ================================================================================
+I, [2018-10-16T13:46:09.705530 #27756]  INFO -- default-centos-7:     Error executing action `restart` on resource 'service[httpd]'
+I, [2018-10-16T13:46:09.706278 #27756]  INFO -- default-centos-7:     ================================================================================
+I, [2018-10-16T13:46:09.706674 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.707074 #27756]  INFO -- default-centos-7:     Chef::Exceptions::Service
+I, [2018-10-16T13:46:09.707683 #27756]  INFO -- default-centos-7:     -------------------------
+I, [2018-10-16T13:46:09.708245 #27756]  INFO -- default-centos-7:     service[httpd]: No custom command for restart specified and unable to locate the init.d script!
+I, [2018-10-16T13:46:09.708670 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.709258 #27756]  INFO -- default-centos-7:     Resource Declaration:
+I, [2018-10-16T13:46:09.709649 #27756]  INFO -- default-centos-7:     ---------------------
+I, [2018-10-16T13:46:09.710017 #27756]  INFO -- default-centos-7:     # In /tmp/kitchen/cache/cookbooks/webserver/recipes/default.rb
+I, [2018-10-16T13:46:09.710360 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.710745 #27756]  INFO -- default-centos-7:      55: service "httpd" do
+I, [2018-10-16T13:46:09.711109 #27756]  INFO -- default-centos-7:      56:   action [ :enable, :start ]
+I, [2018-10-16T13:46:09.711487 #27756]  INFO -- default-centos-7:      57: end
+I, [2018-10-16T13:46:09.711875 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.712000 #27756]  INFO -- default-centos-7:     Compiled Resource:
+I, [2018-10-16T13:46:09.712482 #27756]  INFO -- default-centos-7:     ------------------
+I, [2018-10-16T13:46:09.712719 #27756]  INFO -- default-centos-7:     # Declared in /tmp/kitchen/cache/cookbooks/webserver/recipes/default.rb:55:in `from_file'
+I, [2018-10-16T13:46:09.712786 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.712843 #27756]  INFO -- default-centos-7:     service("httpd") do
+I, [2018-10-16T13:46:09.712897 #27756]  INFO -- default-centos-7:       action [:enable, :start]
+I, [2018-10-16T13:46:09.712952 #27756]  INFO -- default-centos-7:       default_guard_interpreter :default
+I, [2018-10-16T13:46:09.713003 #27756]  INFO -- default-centos-7:       service_name "httpd"
+I, [2018-10-16T13:46:09.713345 #27756]  INFO -- default-centos-7:       enabled nil
+I, [2018-10-16T13:46:09.713430 #27756]  INFO -- default-centos-7:       running nil
+I, [2018-10-16T13:46:09.713683 #27756]  INFO -- default-centos-7:       masked nil
+I, [2018-10-16T13:46:09.713737 #27756]  INFO -- default-centos-7:       pattern "httpd"
+I, [2018-10-16T13:46:09.713783 #27756]  INFO -- default-centos-7:       declared_type :service
+I, [2018-10-16T13:46:09.713832 #27756]  INFO -- default-centos-7:       cookbook_name "webserver"
+I, [2018-10-16T13:46:09.713882 #27756]  INFO -- default-centos-7:       recipe_name "default"
+I, [2018-10-16T13:46:09.713928 #27756]  INFO -- default-centos-7:     end
+I, [2018-10-16T13:46:09.713972 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.714311 #27756]  INFO -- default-centos-7:     System Info:
+I, [2018-10-16T13:46:09.714493 #27756]  INFO -- default-centos-7:     ------------
+I, [2018-10-16T13:46:09.714674 #27756]  INFO -- default-centos-7:     chef_version=14.5.33
+I, [2018-10-16T13:46:09.714727 #27756]  INFO -- default-centos-7:     platform=centos
+I, [2018-10-16T13:46:09.714773 #27756]  INFO -- default-centos-7:     platform_version=7.5.1804
+I, [2018-10-16T13:46:09.714818 #27756]  INFO -- default-centos-7:     ruby=ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+I, [2018-10-16T13:46:09.715146 #27756]  INFO -- default-centos-7:     program_name=/opt/chef/bin/chef-client
+I, [2018-10-16T13:46:09.715200 #27756]  INFO -- default-centos-7:     executable=/opt/chef/bin/chef-client
+I, [2018-10-16T13:46:09.715384 #27756]  INFO -- default-centos-7:     
+I, [2018-10-16T13:46:09.715554 #27756]  INFO -- default-centos-7: 
+I, [2018-10-16T13:46:09.715604 #27756]  INFO -- default-centos-7: Running handlers:
+I, [2018-10-16T13:46:09.715791 #27756]  INFO -- default-centos-7: [2018-10-16T08:16:09+00:00] ERROR: Running exception handlers
+I, [2018-10-16T13:46:09.715984 #27756]  INFO -- default-centos-7: [2018-10-16T08:16:09+00:00] ERROR: Running exception handlers
+I, [2018-10-16T13:46:09.716171 #27756]  INFO -- default-centos-7: Running handlers complete
+I, [2018-10-16T13:46:09.716360 #27756]  INFO -- default-centos-7: [2018-10-16T08:16:09+00:00] ERROR: Exception handlers complete
+I, [2018-10-16T13:46:09.716542 #27756]  INFO -- default-centos-7: [2018-10-16T08:16:09+00:00] ERROR: Exception handlers complete
+I, [2018-10-16T13:46:09.716788 #27756]  INFO -- default-centos-7: Chef Client failed. 3 resources updated in 03 seconds
+I, [2018-10-16T13:46:09.716980 #27756]  INFO -- default-centos-7: [2018-10-16T08:16:09+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2018-10-16T13:46:09.717214 #27756]  INFO -- default-centos-7: [2018-10-16T08:16:09+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2018-10-16T13:46:09.717271 #27756]  INFO -- default-centos-7: [2018-10-16T08:16:09+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2018-10-16T13:46:09.717318 #27756]  INFO -- default-centos-7: [2018-10-16T08:16:09+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2018-10-16T13:46:09.717578 #27756]  INFO -- default-centos-7: [2018-10-16T08:16:09+00:00] FATAL: Chef::Exceptions::MultipleFailures: Multiple failures occurred:
+I, [2018-10-16T13:46:09.717636 #27756]  INFO -- default-centos-7: * Chef::Mixin::Template::TemplateError occurred in chef run: undefined method `[]' for nil:NilClass
+I, [2018-10-16T13:46:09.717686 #27756]  INFO -- default-centos-7: * Chef::Exceptions::Service occurred in delayed notification: service[httpd] (webserver::default line 55) had an error: Chef::Exceptions::Service: service[httpd]: No custom command for restart specified and unable to locate the init.d script!
+I, [2018-10-16T13:46:09.717748 #27756]  INFO -- default-centos-7: 
+I, [2018-10-16T13:46:09.718017 #27756]  INFO -- default-centos-7: [2018-10-16T08:16:09+00:00] FATAL: Chef::Exceptions::MultipleFailures: Multiple failures occurred:
+I, [2018-10-16T13:46:09.718071 #27756]  INFO -- default-centos-7: * Chef::Mixin::Template::TemplateError occurred in chef run: undefined method `[]' for nil:NilClass
+I, [2018-10-16T13:46:09.718124 #27756]  INFO -- default-centos-7: * Chef::Exceptions::Service occurred in delayed notification: service[httpd] (webserver::default line 55) had an error: Chef::Exceptions::Service: service[httpd]: No custom command for restart specified and unable to locate the init.d script!
+I, [2018-10-16T13:46:09.718176 #27756]  INFO -- default-centos-7: 
+E, [2018-10-16T13:46:09.737504 #27756] ERROR -- default-centos-7: Converge failed on instance <default-centos-7>.
+E, [2018-10-16T13:46:09.737708 #27756] ERROR -- default-centos-7: ------Exception-------
+E, [2018-10-16T13:46:09.737759 #27756] ERROR -- default-centos-7: Class: Kitchen::ActionFailed
+E, [2018-10-16T13:46:09.737807 #27756] ERROR -- default-centos-7: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889 
+']
+E, [2018-10-16T13:46:09.737870 #27756] ERROR -- default-centos-7: ----------------------
+E, [2018-10-16T13:46:09.737906 #27756] ERROR -- default-centos-7: ------Backtrace-------
+E, [2018-10-16T13:46:09.737949 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/provisioner/base.rb:91:in `rescue in call'
+E, [2018-10-16T13:46:09.737976 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/provisioner/base.rb:67:in `call'
+E, [2018-10-16T13:46:09.738004 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:408:in `block in converge_action'
+E, [2018-10-16T13:46:09.738031 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:551:in `synchronize_or_call'
+E, [2018-10-16T13:46:09.738056 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:513:in `block in action'
+E, [2018-10-16T13:46:09.738081 #27756] ERROR -- default-centos-7: /usr/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2018-10-16T13:46:09.738106 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:512:in `action'
+E, [2018-10-16T13:46:09.738153 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:404:in `converge_action'
+E, [2018-10-16T13:46:09.738204 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:382:in `block (2 levels) in transition_to'
+E, [2018-10-16T13:46:09.738241 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/lifecycle_hooks.rb:45:in `run_with_hooks'
+E, [2018-10-16T13:46:09.738269 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:381:in `block in transition_to'
+E, [2018-10-16T13:46:09.738295 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:380:in `each'
+E, [2018-10-16T13:46:09.738322 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:380:in `transition_to'
+E, [2018-10-16T13:46:09.738348 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:140:in `converge'
+E, [2018-10-16T13:46:09.738374 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-10-16T13:46:09.738400 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-10-16T13:46:09.738426 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-10-16T13:46:09.738452 #27756] ERROR -- default-centos-7: ----End Backtrace-----
+E, [2018-10-16T13:46:09.738477 #27756] ERROR -- default-centos-7: ---Nested Exception---
+E, [2018-10-16T13:46:09.738502 #27756] ERROR -- default-centos-7: Class: Kitchen::Transport::SshFailed
+E, [2018-10-16T13:46:09.738527 #27756] ERROR -- default-centos-7: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889 
+']
+E, [2018-10-16T13:46:09.738554 #27756] ERROR -- default-centos-7: ----------------------
+E, [2018-10-16T13:46:09.738579 #27756] ERROR -- default-centos-7: ------Backtrace-------
+E, [2018-10-16T13:46:09.738607 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/provisioner/base.rb:91:in `rescue in call'
+E, [2018-10-16T13:46:09.738648 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/provisioner/base.rb:67:in `call'
+E, [2018-10-16T13:46:09.738705 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:408:in `block in converge_action'
+E, [2018-10-16T13:46:09.738761 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:551:in `synchronize_or_call'
+E, [2018-10-16T13:46:09.738818 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:513:in `block in action'
+E, [2018-10-16T13:46:09.738862 #27756] ERROR -- default-centos-7: /usr/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2018-10-16T13:46:09.738888 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:512:in `action'
+E, [2018-10-16T13:46:09.738914 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:404:in `converge_action'
+E, [2018-10-16T13:46:09.738940 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:382:in `block (2 levels) in transition_to'
+E, [2018-10-16T13:46:09.738966 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/lifecycle_hooks.rb:45:in `run_with_hooks'
+E, [2018-10-16T13:46:09.738992 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:381:in `block in transition_to'
+E, [2018-10-16T13:46:09.739017 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:380:in `each'
+E, [2018-10-16T13:46:09.739064 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:380:in `transition_to'
+E, [2018-10-16T13:46:09.739128 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:140:in `converge'
+E, [2018-10-16T13:46:09.739165 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-10-16T13:46:09.739200 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-10-16T13:46:09.739269 #27756] ERROR -- default-centos-7: /var/lib/gems/2.5.0/gems/test-kitchen-1.23.2/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-10-16T13:46:09.739338 #27756] ERROR -- default-centos-7: ----End Backtrace-----
